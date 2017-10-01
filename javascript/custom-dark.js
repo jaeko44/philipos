@@ -47,7 +47,11 @@
         $(window).on("scroll", function() {
             var height = $(this).scrollTop();
             console.log("Height logged: " + height);
-            if(height > 500) {//education
+            if(height < 300) {//education
+                $("li[id^=nav-]").removeClass("active").addClass("inactive");
+                $("#nav-about").addClass("active").removeClass("inactive");
+            }
+            if(height > 600) {//education
                 $("li[id^=nav-]").removeClass("active").addClass("inactive");
                 $("#nav-education").addClass("active").removeClass("inactive");
             }
@@ -56,15 +60,15 @@
                 $("li[id^=nav-]").removeClass("active").addClass("inactive");
                 $("#nav-skills").addClass("active").removeClass("inactive");
             }
-            if (height > 1900) {
+            if (height > 1930) {
                 $("li[id^=nav-]").removeClass("active").addClass("inactive");
                 $("#nav-experience").addClass("active").removeClass("inactive");
             }
-            if (height > 2400) {
+            if (height > 2600) {
                 $("li[id^=nav-]").removeClass("active").addClass("inactive");
                 $("#nav-portfolio").addClass("active").removeClass("inactive");
             }
-            if (height > 2900) {
+            if (height > 3400) {
                 $("li[id^=nav-]").removeClass("active").addClass("inactive");
                 $("#nav-other").addClass("active").removeClass("inactive");
             }
@@ -85,8 +89,8 @@
       });
     }
     function initPortfolio() {
-      var all = "#a,#b,#c";
-      var afterFirst = "#b,#c";
+      var all = "#sample,#web,#app,#other";
+      var afterFirst = "#web,#app,#other";  
       var addButton = "#add-more";
       var addButtonIcon = "#port-add-icon";
       var otherOption = "a.cate";
