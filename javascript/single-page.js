@@ -21,8 +21,8 @@
       paginationClickable: true
     });
   });
-  jQuery(window).on("load", function() {
-    $("div#loading").fadeOut(500);
+  $(function() {
+    $("div#loading").fadeOut(1000);
     window.sr = ScrollReveal({ reset: false });
     var commonCards = ".widget-holder,.post,.disqus-comment";
     sr.reveal(commonCards, { duration: 1100 });

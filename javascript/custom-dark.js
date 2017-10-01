@@ -72,6 +72,10 @@
                 $("li[id^=nav-]").removeClass("active").addClass("inactive");
                 $("#nav-other").addClass("active").removeClass("inactive");
             }
+            if (height > 4250) {
+                $("li[id^=nav-]").removeClass("active").addClass("inactive");
+                $("#nav-contact").addClass("active").removeClass("inactive");
+            }
 
         });
     }
@@ -328,7 +332,7 @@
       ];
       var mapOptions = {
         zoom: 17,
-        center: new google.maps.LatLng(51.5287352, -0.3817831),
+        center: new google.maps.LatLng(-33.778808, 150.871468),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         scrollwheel: false,
         disableDefaultUI: false,
